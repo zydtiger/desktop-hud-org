@@ -8,4 +8,10 @@ module.exports = {
   module: {
     rules: require('./webpack.rules'),
   },
+  cache: {
+    type: 'filesystem',
+    buildDependencies: {
+      config: [__filename]
+    }
+  },
 };

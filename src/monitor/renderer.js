@@ -26,6 +26,19 @@
  * ```
  */
 
-import './index.css';
+import { createApp } from 'vue'
+import App from './App.vue'
 
-console.log('👋 This message is being logged by "renderer.js", included via webpack');
+import '../utils/spacingjs'
+
+/*
+if font-awesome does not work, update vue-fontawesome
+*/
+
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { faXmark } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faXmark)
+
+createApp(App).component('fa-icon', FontAwesomeIcon).mount('#app')

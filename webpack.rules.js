@@ -16,6 +16,10 @@ module.exports = [
       },
     },
   },
+  {
+    test: /\.scss$/,
+    use: ['style-loader', 'css-loader', 'sass-loader']
+  },
   // Put your webpack loader rules in this array.  This is where you would put
   // your ts-loader configuration for instance:
   /**

@@ -1,0 +1,45 @@
+$bRadius: 8px;
+$scrollColor: rgb(182, 182, 182);
+$scrollActive: rgb(151, 151, 151);
+
+%child-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%btn-base {
+  color: white;
+  font-size: 18px;
+
+  &:hover {
+    color: #ddd;
+  }
+
+  &:active {
+    color: #bbb;
+  }
+}
+
+.btn {
+  @extend %btn-base;
+  @extend %child-center;
+}
+
+%btn-back-base {
+  background-color: #fffa;
+  color: black;
+  
+  &:hover {
+    background-color: #eeea;
+  }
+
+  &:active {
+    background-color: #ddda;
+  }
+}
+
+.btn-back {
+  @extend %btn-back-base;
+  @extend %child-center;
+}
